@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "99546706392",
+    "project_id": "customme-kubsu",
+    "storage_bucket": "customme-kubsu.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:99546706392:android:7d3d0172f9465581d282ad",
+        "android_client_info": {
+          "package_name": "com.example.customme"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBCFQ1BMiZ7QDvMq0OPJrggtfJEAeOa9Bk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

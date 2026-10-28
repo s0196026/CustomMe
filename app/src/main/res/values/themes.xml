@@ -1,0 +1,22 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.CustomMe" parent="Theme.Material3.DayNight.NoActionBar">
+        <item name="colorPrimary">@color/green_primary</item>
+        <item name="colorPrimaryVariant">@color/green_dark</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <item name="android:statusBarColor">@color/green_primary</item>
+        <item name="android:windowLightStatusBar">true</item>
+    </style>
+
+    <style name="Widget.App.BottomNavigationView" parent="Widget.MaterialComponents.BottomNavigationView">
+        <item name="itemActiveIndicatorStyle">@null</item>
+        <item name="itemIconSize">29dp</item>
+        <item name="labelVisibilityMode">unlabeled</item>
+        <item name="android:minHeight">60dp</item>
+        <!-- Убираем кружок (Ripple) при нажатии -->
+        <item name="itemRippleColor">@android:color/transparent</item>
+        <item name="itemBackground">@android:color/transparent</item>
+    </style>
+
+    <style name="Theme.CustomMe" parent="Base.Theme.CustomMe" />
+</resources>

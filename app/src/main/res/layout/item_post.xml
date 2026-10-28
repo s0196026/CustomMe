@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="8dp">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardImage"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:cardCornerRadius="12dp"
+        app:cardElevation="0dp"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <!-- Карусель фотографий публикации -->
+        <androidx.viewpager2.widget.ViewPager2
+            android:id="@+id/postImages"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+    </androidx.cardview.widget.CardView>
+
+    <!-- Счётчик фотографий в карусели -->
+    <TextView
+        android:id="@+id/tvImageCounter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:background="@drawable/bg_image_counter"
+        android:paddingStart="8dp"
+        android:paddingTop="3dp"
+        android:paddingEnd="8dp"
+        android:paddingBottom="3dp"
+        android:textColor="@color/white"
+        android:textSize="11sp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@id/cardImage"
+        app:layout_constraintStart_toStartOf="@id/cardImage"
+        tools:text="1/3"
+        tools:visibility="visible" />
+
+    <!-- Иконка сердечка (сохранения) -->
+    <ImageView
+        android:id="@+id/btnHeart"
+        android:layout_width="28dp"
+        android:layout_height="28dp"
+        android:layout_margin="8dp"
+        android:src="@android:drawable/btn_star"
+        app:tint="#FFFFFF"
+        app:layout_constraintBottom_toBottomOf="@id/cardImage"
+        app:layout_constraintEnd_toEndOf="@id/cardImage" />
+
+    <!-- Название -->
+    <TextView
+        android:id="@+id/postTitle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:textColor="#1A1A1A"
+        android:textSize="12sp"
+        android:maxLines="1"
+        android:ellipsize="end"
+        app:layout_constraintTop_toBottomOf="@id/cardImage"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/btnMore" />
+
+    <!-- Сложность -->
+    <TextView
+        android:id="@+id/postComplexity"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="2dp"
+        android:letterSpacing="0.06"
+        android:textColor="@color/green_text"
+        android:textSize="11sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/postTitle"
+        tools:text="★★" />
+
+    <!-- Троеточие -->
+    <TextView
+        android:id="@+id/btnMore"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="..."
+        android:textColor="#757575"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@id/postTitle"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
